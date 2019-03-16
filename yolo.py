@@ -9,7 +9,7 @@ from PIL import Image
 from keras import backend as K
 from keras.models import load_model
 
-# The below provided fucntions will be used from yolo_utils.py
+# The below provided functions will be used from yolo_utils.py
 from yolo_utils import read_classes, read_anchors, generate_colors, preprocess_image, draw_boxes
 
 # The below functions from the yad2k library will be used
@@ -25,7 +25,7 @@ width, height = input_image.size
 width = np.array(width, dtype=float)
 height = np.array(height, dtype=float)
 
-#Assign the shape of the input image to image_shapr variable
+#Assign the shape of the input image to image_shape variable
 image_shape = (height, width)
 
 
@@ -36,7 +36,7 @@ anchors = read_anchors("model_data/yolo_anchors.txt")
 #Load the pretrained model. Please refer the README file to get info on how to obtain the yolo.h5 file
 yolo_model = load_model("model_data/yolo.h5")
 
-#Print the summery of the model
+#Print the summary of the model
 yolo_model.summary()
 
 #Convert final layer features to bounding box parameters
